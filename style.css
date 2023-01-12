@@ -1,0 +1,33 @@
+body {
+    font-size: 15pt;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 200px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc((100px * 0));
+  padding-right: 15px;
+  animation:
+    type 2000ms steps(9, start) infinite alternate,
+    blink 300ms step-end infinite alternate;
+}
+
+@keyframes type {
+  0%, 10%{
+    width: calc((100px * 0));
+  }
+  60%, 100% {
+    width: calc((100px * 9));
+  }
+}
+@keyframes blink {
+  from, to {
+    border-right: 10px solid blue;
+  }
+  50% {
+    border-right: none;
+  }
+}
